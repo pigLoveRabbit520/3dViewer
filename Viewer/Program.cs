@@ -1,9 +1,11 @@
 ﻿using System.Threading;
-
+using OpenTK;
+using THREE;
+using Color = THREE.Color;
 namespace THREEExample;
 
 
-public class FirstSceneExample : Example
+public class FirstSceneExample : SceneBase
 {
     Scene scene;
 
@@ -94,11 +96,13 @@ public class FirstSceneExample : Example
         //      // add the sphere to the scene
         scene.Add(sphere);
     }
+
     public override void Render()
     {
         controls.Update();
         this.renderer.Render(scene, camera);
     }
+
     public override void Resize(System.Drawing.Size clientSize)
     {
         base.Resize(clientSize);

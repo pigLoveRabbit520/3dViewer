@@ -9,7 +9,7 @@ namespace THREE
 {
     public class GLRenderer : DisposableObject
     {
-        public OpenTK.Graphics.IGraphicsContext Context;
+        public OpenTK.Windowing.Common.IGraphicsContext Context;
 
         public event EventHandler<EventArgs> Disposed;
 

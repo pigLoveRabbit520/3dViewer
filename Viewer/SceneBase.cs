@@ -1,7 +1,4 @@
-﻿/**
- * This WinForms project  and Example templates were created by referring to Three.cs( (https://github.com/lathoub/three.cs).  
- * */
-using OpenTK;
+﻿using OpenTK;
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -10,7 +7,7 @@ using THREE;
 
 namespace THREEExample
 {
-    abstract public class Example
+    abstract public class SceneBase
     {
         public GLRenderer renderer;
 
@@ -20,6 +17,7 @@ namespace THREEExample
         protected readonly Stopwatch stopWatch = new Stopwatch();
 
         public GLControl glControl;
+
         public virtual void Load(GLControl control)
         {
             Debug.Assert(null != control);
